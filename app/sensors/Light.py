@@ -51,10 +51,10 @@ class Light:
                 id=self.id),
             'json_attributes_topic': light_attributes_topic.format(
                 id=self.id),
+            'payload_off': "OFF",
             'payload_on': "ON",
-            'payload_off: "OFF",
-            'state_value_template: "{{ 'ON' if value | int(0) > 0 else 'OFF' }}",
             'on_command_type': "brightness",
+            'state_value_template': "{{ 'ON' if value | int(0) > 0 else 'OFF' }}",
             'retain': 'false',
             'device': self.device}
 
